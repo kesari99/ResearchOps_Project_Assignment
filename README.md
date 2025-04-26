@@ -1,8 +1,8 @@
 # Project Management System with Daily Standups
 
-![Project Dashboard](https://drive.google.com/file/d/1XE-miHu3dk5W9imcIalbR_HrQNC9Mo49/view?usp=sharing) <!-- Add your screenshot path -->
-
-A full-featured project management platform with integrated daily standup meetings, role-based access control, and kanban-style task boards.
+![myProjects](https://github.com/user-attachments/assets/15dc20e1-738f-4245-8a9d-130d20210fe9)
+A full-featured project management platform with integrated daily standup meetings, role-based access control, and kanban-
+style task boards.
 
 ## Key Features
 
