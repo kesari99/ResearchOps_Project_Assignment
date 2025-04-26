@@ -62,11 +62,12 @@ style task boards.
 1. Clone the repository:
    ```bash
    git https://github.com/kesari99/ResearchOps_Project_Assignment.git
-   
-# In first terminal (for server)
-cd server
-npm run dev
+   # In first terminal (for server)
+    cd server
+    npm run dev
 
-# In second terminal (for client)
-cd client
-npm run dev
+    # In second terminal (for client)
+    cd client
+    npm run dev
+   
+
