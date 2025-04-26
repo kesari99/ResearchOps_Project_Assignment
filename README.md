@@ -1,6 +1,5 @@
 # Project Management System with Daily Standups
 
-![myProjects](https://github.com/user-attachments/assets/15dc20e1-738f-4245-8a9d-130d20210fe9)
 A full-featured project management platform with integrated daily standup meetings, role-based access control, and kanban-
 style task boards.
 
@@ -20,6 +19,8 @@ style task boards.
 - Create and organize projects with metadata
 - Team assignment and collaboration
 - Project progress tracking
+- ![myProjects](https://github.com/user-attachments/assets/15dc20e1-738f-4245-8a9d-130d20210fe9)
+
 
 ### 🎯 Task Management
 - Kanban-style boards (To Do, In Progress, Review, Done)
@@ -28,6 +29,8 @@ style task boards.
 - Task history tracking
 - 
 ![MyTasks](https://github.com/user-attachments/assets/28a0ed1f-c979-4352-bd9c-303e515b9ca7)
+
+![Screenshot (180)](https://github.com/user-attachments/assets/c3ee498a-99c6-497e-ba39-926d095ff5f1)
 
 
 ### 📅 Daily Standup System
