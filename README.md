@@ -1,6 +1,6 @@
 # Project Management System with Daily Standups
 
-A full-featured project management platform with integrated daily standup meetings, role-based access control, and kanban-
+A full-featured project management platform with integrated daily standup meetings, role-based access control, and trello
 style task boards.
 
 ## Key Features
@@ -13,11 +13,10 @@ style task boards.
 ### 👥 Role-Based Access Control
 - **Admin**: Full system access, user management
 - **Manager**: Project creation, team management
-- **Researcher**: Task management, daily updates
+- **Researcher**: Project creation, team management
 
 ### 📊 Project Management
 - Create and organize projects with metadata
-- Team assignment and collaboration
 - Project progress tracking
 - ![myProjects](https://github.com/user-attachments/assets/15dc20e1-738f-4245-8a9d-130d20210fe9)
 
@@ -49,9 +48,7 @@ style task boards.
 - Advanced filtering options
 - Recent items display
 
-![Search Results](screenshots/search.png) <!-- Add your screenshot path -->
 
-## Installation
 
 ### Prerequisites
 - Node.js (v16+)
