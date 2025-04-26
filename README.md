@@ -61,5 +61,12 @@ style task boards.
 ### Setup
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/project-management-system.git
-   cd project-management-system
+   git https://github.com/kesari99/ResearchOps_Project_Assignment.git
+   
+# In first terminal (for server)
+cd server
+npm run dev
+
+# In second terminal (for client)
+cd client
+npm run dev
