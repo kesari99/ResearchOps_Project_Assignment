@@ -37,9 +37,7 @@ style task boards.
 - Structured update format:
   - What I did yesterday
   - What I'll do today
-  - Current blockers
 - Meeting history with timestamps
-- End-of-day edits available
 
 ![DailyStandupMeeting](https://github.com/user-attachments/assets/0d50719e-9cf6-4a71-a690-64fbba13441e)
 
