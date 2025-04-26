@@ -20,7 +20,6 @@ const DailyMeetingTrigger = () => {
       // Show at 9 AM
       if (hours !== 9) return false;
       
-      // Check local storage to prevent showing multiple times in the same day
       const lastMeetingDate = localStorage.getItem('lastDailyMeetingDate');
       const today = now.toDateString();
       

@@ -44,7 +44,7 @@ const AuthPage = () => {
 
             <header className='flex items-center border-bottom'>
                 <Link to='/' className='flex items-center justify-center'>
-                    <span className='font-extrabold text-xl '>MyListings</span>
+                    <span className='font-extrabold text-xl '>KrewForce</span>
 
                 </Link>
 
