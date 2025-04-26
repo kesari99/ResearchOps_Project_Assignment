@@ -3,17 +3,14 @@ import Task from '../../models/Task.js';
 import MeetingNote from '../../models/MeetingNote.js'
 
 
-// Create new meeting notes
 export const createMeetingNotes = async (req, res) => {
   try {
     const { userId, projectId, taskUpdates, generalNote } = req.body;
     
-    // Validate userId
     if (!mongoose.Types.ObjectId.isValid(userId)) {
       return res.status(400).json({ success: false, message: 'Invalid user ID' });
     }
     
-    // Create meeting note record
     const meetingNote = new MeetingNote({
       userId,
       projectId: projectId || null,
@@ -36,13 +33,11 @@ export const createMeetingNotes = async (req, res) => {
           ].filter(Boolean).join(' | ')}`
         };
         
-        // Update task with history
         await Task.findByIdAndUpdate(update.taskId, {
           $push: { history: historyEntry },
           lastUpdated: new Date()
         });
         
-        // If task has blockers, consider updating status or adding a flag
         if (update.blockers) {
           // Optional: Add logic to flag or update task status if there are blockers
         }
@@ -61,17 +56,14 @@ export const createMeetingNotes = async (req, res) => {
   }
 };
 
-// Get meeting notes by user ID
 export const getUserMeetingNotes = async (req, res) => {
   try {
     const userId = req.params.userId;
     
-    // Validate user ID
     if (!mongoose.Types.ObjectId.isValid(userId)) {
       return res.status(400).json({ success: false, message: 'Invalid user ID' });
     }
     
-    // Find all meeting notes for this user
     const meetingNotes = await MeetingNote.find({ userId })
       .populate('projectId', 'title')
       .populate('taskUpdates.taskId', 'title')
@@ -85,17 +77,14 @@ export const getUserMeetingNotes = async (req, res) => {
   }
 };
 
-// Get meeting notes by project ID
 export const getProjectMeetingNotes = async (req, res) => {
   try {
     const projectId = req.params.projectId;
     
-    // Validate project ID
     if (!mongoose.Types.ObjectId.isValid(projectId)) {
       return res.status(400).json({ success: false, message: 'Invalid project ID' });
     }
     
-    // Find all meeting notes for this project
     const meetingNotes = await MeetingNote.find({ projectId })
       .populate('userId', 'userName')
       .populate('taskUpdates.taskId', 'title')

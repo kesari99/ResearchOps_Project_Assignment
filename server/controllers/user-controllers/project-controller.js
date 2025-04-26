@@ -6,7 +6,6 @@ export const GetProjectById = async (req, res) => {
         const { projectId } = req.params;
         
         
-        // Validate ID format first
         if (!mongoose.Types.ObjectId.isValid(projectId)) {
             return res.status(400).json({
                 success: false,
@@ -22,7 +21,7 @@ export const GetProjectById = async (req, res) => {
                 options: { sort: { 'lastUpdated': -1 } }
             });
         
-        console.log('Query result:', project); // Debug log
+        console.log('Query result:', project); 
         
         if (!project) {
             return res.status(404).json({

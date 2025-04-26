@@ -40,8 +40,8 @@ const Listings = () => {
     },
     {
       icon:Calendar, 
-      label:"Meeting",
-      value:"meeting",
+      label:"Daily Standup",
+      value:"daily-standup",
       visible:['manager','researcher'],
       component: <MyMeetings />
 

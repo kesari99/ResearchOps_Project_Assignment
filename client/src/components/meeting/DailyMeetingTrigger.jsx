@@ -7,10 +7,8 @@ const DailyMeetingTrigger = () => {
   const [showModal, setShowModal] = useState(false);
   
   useEffect(() => {
-    // Check if user is logged in
     if (!auth?.user?._id) return;
     
-    // Check if we should show meeting modal today
     const shouldShowMeeting = () => {
       const now = new Date();
       const day = now.getDay();
@@ -31,19 +29,15 @@ const DailyMeetingTrigger = () => {
       return true;
     };
     
-    // Function to check and trigger meeting modal
     const checkTime = () => {
       if (shouldShowMeeting()) {
         setShowModal(true);
-        // Mark as shown for today
         localStorage.setItem('lastDailyMeetingDate', new Date().toDateString());
       }
     };
     
-    // Check immediately when component mounts
     checkTime();
     
-    // Check every minute
     const interval = setInterval(checkTime, 60000);
     
     return () => clearInterval(interval);
@@ -53,7 +47,6 @@ const DailyMeetingTrigger = () => {
     setShowModal(false);
   };
   
-  // The component doesn't render anything visible, just handles the modal
   return (
     <>
       {showModal && <DailyMeetingModal isOpen={showModal} onClose={handleClose} />}

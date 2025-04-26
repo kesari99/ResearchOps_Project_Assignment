@@ -17,7 +17,6 @@ router.patch('/:taskId/status',authenticate, UpdateTaskStatus);
 // Update task details
 router.put('/:taskId',authenticate, UpdateTaskDetails);
 
-// Delete task
 router.delete('/:taskId',authenticate, DeleteTask);
 
 router.get('/user/:userId',authenticate , getUserTasks);

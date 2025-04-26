@@ -24,17 +24,14 @@ const DailyMeetingModal = ({ isOpen, onClose, projectId = null }) => {
     try {
       const response = await getUserTasks(auth?.user?._id);
       if (response.success) {
-        // Filter by project if projectId is provided
         const filteredTasks = projectId 
           ? response.data.filter(task => task.project?._id === projectId)
           : response.data;
         
-        // Filter out completed tasks
         const activeTasks = filteredTasks.filter(task => task.status !== 'Done');
         
         setTasks(activeTasks);
         
-        // Initialize task updates
         const updates = {};
         activeTasks.forEach(task => {
           updates[task._id] = {
@@ -65,7 +62,6 @@ const DailyMeetingModal = ({ isOpen, onClose, projectId = null }) => {
   const handleSubmit = async () => {
     setSaving(true);
     try {
-      // Format data for API
       const taskUpdatesArray = Object.entries(taskUpdates).map(([taskId, updates]) => ({
         taskId,
         yesterday: updates.yesterday,

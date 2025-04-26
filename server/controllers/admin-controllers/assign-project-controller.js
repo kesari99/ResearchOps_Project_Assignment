@@ -18,7 +18,6 @@ export const AssignProject = async (req, res) => {
         startDate
     })
 
-    //assign projects to users
 
     await User.updateMany(
         {_id: {$in: assignedUserIds}},

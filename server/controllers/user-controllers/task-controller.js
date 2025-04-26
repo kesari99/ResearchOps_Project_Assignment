@@ -81,7 +81,6 @@ export const CreateNewTask = async (req, res) => {
       } = req.body;
   
       
-      // Create the task
       const newTask = await Task.create([{
         title,
         description,
@@ -101,7 +100,6 @@ export const CreateNewTask = async (req, res) => {
         }]
       }], { session });
       
-      // Add task to project
       await Project.findByIdAndUpdate(
         projectId,
         { $push: { tasks: newTask[0]._id } },
@@ -110,7 +108,6 @@ export const CreateNewTask = async (req, res) => {
       
       await session.commitTransaction();
       
-      // Populate assigned user before returning
       const populatedTask = await Task.findById(newTask[0]._id)
         .populate('assignedUser', 'userName userEmail');
       
@@ -171,7 +168,6 @@ export const DeleteTask = async (req, res) => {
     try {
       const { taskId } = req.params;
       
-      // Find task to get project ID
       const task = await Task.findById(taskId);
       
       if (!task) {
@@ -181,14 +177,12 @@ export const DeleteTask = async (req, res) => {
         });
       }
       
-      // Remove task from project
       await Project.findByIdAndUpdate(
         task.project,
         { $pull: { tasks: taskId } },
         { session }
       );
       
-      // Delete the task
       await Task.findByIdAndDelete(taskId, { session });
       
       await session.commitTransaction();
