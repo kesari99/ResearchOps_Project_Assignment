@@ -26,8 +26,9 @@ style task boards.
 - Drag-and-drop task organization
 - Priority levels, tags, and due dates
 - Task history tracking
+- 
+![MyTasks](https://github.com/user-attachments/assets/28a0ed1f-c979-4352-bd9c-303e515b9ca7)
 
-![Task Board](screenshots/board.gif) <!-- Add your GIF path -->
 
 ### 📅 Daily Standup System
 - Automated daily meeting prompts at 9 AM
@@ -38,7 +39,7 @@ style task boards.
 - Meeting history with timestamps
 - End-of-day edits available
 
-![Meeting Mode](screenshots/meeting-modal.png) <!-- Add your screenshot path -->
+![DailyStandupMeeting](https://github.com/user-attachments/assets/0d50719e-9cf6-4a71-a690-64fbba13441e)
 
 ### 🔍 Search & Filtering
 - Quick search across projects and tasks
